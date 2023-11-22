@@ -7,6 +7,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -28,6 +29,7 @@ public class Coluna implements Serializable {
 	
 	private Integer tamanho;
 	
+	@Column(name = "EH_NULO", length = 2)
 	private String nulo;
 	
 	private String descricao;

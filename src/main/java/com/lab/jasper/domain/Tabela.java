@@ -27,7 +27,7 @@ public class Tabela implements Serializable {
 	
 	private String esquema;
 	
-	@OneToMany(mappedBy = "id.coluna", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "id.tabela", fetch = FetchType.EAGER)
 	private List<Coluna> colunas;
 
 	public Integer getCodigo() {
@@ -54,6 +54,14 @@ public class Tabela implements Serializable {
 		this.esquema = esquema;
 	}
 	
+	public List<Coluna> getColunas() {
+		return colunas;
+	}
+
+	public void setColunas(List<Coluna> colunas) {
+		this.colunas = colunas;
+	}
+
 	@Override
 	public int hashCode() {
 		return new HashCodeBuilder().append(codigo).toHashCode();

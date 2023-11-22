@@ -1,8 +1,8 @@
-package com.lab.jasper;
+package com.lab.jasper.domain;
 
 public enum VersaoEnum {
-	V1("tabelaV1.jasper", "/home/thiagocs/Documents/listaPessoasV1.pdf"),
-	V2("tabelaV2.jasper", "/home/thiagocs/Documents/listaPessoasV2.pdf");
+	V1("tabelaV1.jasper", "listaTabelasV1.pdf"),
+	V2("tabelaV2.jasper", "listaTabelasV2.pdf");
 	
 	private VersaoEnum(String template, String saida) {
 		this.template = template;

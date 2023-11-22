@@ -58,7 +58,17 @@ public class ColunaId implements Serializable {
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+    	Integer codigoTabela = null;
+
+        if (tabela != null) {
+            codigoTabela = tabela.getCodigo();
+        }
+        
+        ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.JSON_STYLE);
+        builder.append("codigoTabela", codigoTabela);
+        builder.append("codigo", codigo);
+
+        return builder.toString();
     }	
 
 }

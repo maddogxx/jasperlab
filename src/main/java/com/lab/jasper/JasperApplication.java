@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import com.lab.jasper.domain.VersaoEnum;
+
 @SpringBootApplication
 public class JasperApplication {
 	
@@ -21,7 +23,7 @@ public class JasperApplication {
     CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 			gerador.gerarRelatorio(VersaoEnum.V1);
-			gerador.gerarRelatorio(VersaoEnum.V2);
+//			gerador.gerarRelatorio(VersaoEnum.V2);
 		};
 	}	
 

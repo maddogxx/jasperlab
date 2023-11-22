@@ -15,7 +15,7 @@ create table labo.coluna (
 	tipo varchar(255) not null,
 	precisao int,
 	tamanho int,
-	eh_nulo varchar(255) not null,
+	eh_nulo varchar(255),
 	descricao varchar(255),
 	primary key (codigo_tabela, codigo)
 )
