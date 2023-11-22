@@ -39,12 +39,18 @@ public class GeradorRelatorio {
 		List<Tabela> tabelas = repoTabela.findAll();
 		
 		String caminhoTemplate = this.obterCaminhoRecurso(versao.getTemplate());
+		String caminhoSubTemplate = this.obterCaminhoRecurso(versao.getSubTemplate());
 		
 		try {
 			JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(caminhoTemplate);
 			jasperReport.setWhenNoDataType(WhenNoDataTypeEnum.ALL_SECTIONS_NO_DETAIL);
 			
 			Map<String, Object> parametros = new HashMap<>();
+			
+			
+			if (VersaoEnum.V1.equals(versao)) {
+				parametros.put("SUB_RELATORIO_COLUNAS", caminhoSubTemplate);
+			}
 			
 			if (VersaoEnum.V2.equals(versao)) {
 				parametros.put("PERSON_DATASOURCE", new JRBeanCollectionDataSource(tabelas, false));

@@ -18,6 +18,7 @@
 			<![CDATA[]]>
 		</queryString>
 	</subDataset>
+	<parameter name="SUB_RELATORIO_COLUNAS" class="java.lang.String"/>
 	<queryString language="csv">
 		<![CDATA[]]>
 	</queryString>
@@ -47,7 +48,7 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="50" splitType="Stretch">
+		<band height="81" splitType="Stretch">
 			<textField>
 				<reportElement x="60" y="0" width="100" height="30" uuid="8cc6f987-4ed0-48fc-9b0f-cfe2f6f705f1"/>
 				<textFieldExpression><![CDATA[$F{esquema}]]></textFieldExpression>
@@ -66,6 +67,16 @@
 				<box leftPadding="5"/>
 				<text><![CDATA[Tabela:]]></text>
 			</staticText>
+			<subreport>
+				<reportElement x="0" y="40" width="555" height="30" uuid="04c4002d-b86c-43a8-a2bc-2afde49793a7">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{colunas}, false)]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUB_RELATORIO_COLUNAS}]]></subreportExpression>
+			</subreport>
+			<break>
+				<reportElement x="0" y="80" width="100" height="1" uuid="3dd78c16-f5c7-46a7-8f78-31805ddcdcca"/>
+			</break>
 		</band>
 	</detail>
 	<pageFooter>
