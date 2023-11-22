@@ -23,7 +23,7 @@ public class JasperApplication {
     CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 			gerador.gerarRelatorio(VersaoEnum.V1);
-//			gerador.gerarRelatorio(VersaoEnum.V2);
+			gerador.gerarRelatorio(VersaoEnum.V2);
 		};
 	}	
 
