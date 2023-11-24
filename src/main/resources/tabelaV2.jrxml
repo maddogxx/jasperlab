@@ -83,7 +83,7 @@
 	<detail>
 		<band height="129" splitType="Stretch">
 			<componentElement>
-				<reportElement x="0" y="41" width="555" height="60" uuid="638800d0-91c7-4aeb-a45f-97714fb7630b">
+				<reportElement style="Table_TD" x="0" y="41" width="555" height="60" uuid="638800d0-91c7-4aeb-a45f-97714fb7630b">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
 					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
 					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
@@ -148,7 +148,7 @@
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="0" y="0" width="80" height="30" uuid="9a873b04-bf18-4bc3-896e-079059ec9c93"/>
 								<box topPadding="5" leftPadding="5"/>
 								<textFieldExpression><![CDATA[$F{precisao}]]></textFieldExpression>
@@ -168,7 +168,7 @@
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="0" y="0" width="80" height="30" uuid="ebd562da-34ba-473e-81f3-14e5d7a71d24"/>
 								<box topPadding="5" leftPadding="5"/>
 								<textFieldExpression><![CDATA[$F{tamanho}]]></textFieldExpression>
@@ -188,7 +188,7 @@
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30">
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="0" y="0" width="60" height="30" uuid="c9092b80-d854-443c-b523-52258b03837e"/>
 								<box topPadding="5" leftPadding="5"/>
 								<textFieldExpression><![CDATA[$F{nulo}]]></textFieldExpression>
